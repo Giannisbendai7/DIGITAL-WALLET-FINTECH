@@ -1,9 +1,8 @@
 import streamlit as st
+from predict import predict
 
-st.title("Customer Lifetime Value Predictor")
+st.title("Digital Wallet LTV Predictor")
 
-age = st.number_input("Age")
-income = st.number_input("Income")
-
-if st.button("Predict"):
-    st.write("Predicted LTV: 1234 € (dummy)")
+if st.button("Run prediction"):
+    result = predict([[1, 2, 3]])
+    st.write(result)
